@@ -16,7 +16,6 @@ mob_scene = ExtResource("2_h2yge")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(242, 451)
-speed = 400
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -37,7 +36,6 @@ curve = SubResource("Curve2D_0xm2m")
 position = Vector2(-1, 0)
 rotation = -0.006223986
 
-[connection signal="body_shape_exited" from="Player" to="." method="hit"]
 [connection signal="body_shape_exited" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
