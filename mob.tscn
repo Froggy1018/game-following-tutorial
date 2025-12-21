@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmrhbmgbh0ruh"]
+[gd_scene load_steps=9 format=3 uid="uid://cmrhbmgbh0ruh"]
 
-[ext_resource type="Script" uid="uid://0rvt1cog07rd" path="res://mob.gd" id="1_1qmh0"]
 [ext_resource type="Texture2D" uid="uid://dgctagoke73qu" path="res://enemyFlyingAlt_1.png" id="2_gfurk"]
 [ext_resource type="Texture2D" uid="uid://bshdm53jsv1tn" path="res://enemyFlyingAlt_2.png" id="3_ieysi"]
 [ext_resource type="Texture2D" uid="uid://bilce4om3g2k1" path="res://enemySwimming_1.png" id="4_cixyi"]
@@ -48,23 +47,19 @@ animations = [{
 radius = 36.0
 height = 102.0
 
-[node name="Node2D" type="Node2D"]
+[node name="mob" type="RigidBody2D"]
 
-[node name="mob" type="RigidBody2D" parent="."]
-collision_mask = 0
-gravity_scale = 0.0
-script = ExtResource("1_1qmh0")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mob"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_yscv0")
 animation = &"walk"
 frame_progress = 0.24679711
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mob"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_eqsov")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="mob"]
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 position = Vector2(-1, 1)
+enable_node_path = NodePath("")
