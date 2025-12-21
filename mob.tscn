@@ -47,7 +47,7 @@ animations = [{
 radius = 36.0
 height = 102.0
 
-[node name="mob" type="RigidBody2D"]
+[node name="mob" type="RigidBody2D" groups=["mobs"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
