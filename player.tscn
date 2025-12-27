@@ -1,19 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://cca84c4i6fiof"]
+[gd_scene load_steps=6 format=3 uid="uid://cca84c4i6fiof"]
 
-[ext_resource type="Texture2D" uid="uid://cnq3f85u3jh0r" path="res://playerGrey_up1.png" id="1_hqtel"]
 [ext_resource type="Script" uid="uid://cjgy6rrlihip3" path="res://player.gd" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://dqinuv8n31abb" path="res://playerGrey_up2.png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://ccbi1xl1v07sr" path="res://playerGrey_walk1.png" id="3_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://b0i4ifs05le4t" path="res://playerGrey_walk2.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://bjjf1xi10t486" path="res://Frog_walk_1-removebg-preview.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://cjk0u1iao6uih" path="res://Frog_walk_2-removebg-preview.png" id="3_hqtel"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_hqtel")
+"texture": ExtResource("2_i3pqv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_sweqy")
+"texture": ExtResource("3_hqtel")
 }],
 "loop": true,
 "name": &"up",
@@ -21,10 +19,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_2hs0m")
+"texture": ExtResource("2_i3pqv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_1jxqw")
+"texture": ExtResource("3_hqtel")
 }],
 "loop": true,
 "name": &"walk",
@@ -32,11 +30,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b26j0"]
-radius = 27.0
-height = 68.0
+radius = 24.0
+height = 58.0
 
 [node name="Player" type="Area2D"]
-position = Vector2(42, 46)
+position = Vector2(42, 54)
 script = ExtResource("1_sweqy")
 speed = null
 metadata/_edit_group_ = true
@@ -47,6 +45,7 @@ sprite_frames = SubResource("SpriteFrames_dw050")
 animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_b26j0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
