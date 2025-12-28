@@ -4,7 +4,11 @@ extends Node
 var score
 
 func _ready():
-	pass
+	$Player.hit.connect(game_over)
+	
+	# Also connect HUD's start_game signal
+	$HUD.start_game.connect(new_game)
+
 
 func game_over():
 	$ScoreTimer.stop()
