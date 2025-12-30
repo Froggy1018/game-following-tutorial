@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpp5fpdwfm70w" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cca84c4i6fiof" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://cmrhbmgbh0ruh" path="res://mob.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cmrhbmgbh0ruh" path="res://Beetle.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dqf11wlrx0w4i" path="res://lilypad.png" id="3_272bh"]
 [ext_resource type="PackedScene" uid="uid://oww3osyvijym" path="res://hud.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://b33th7w1lxgp" path="res://House In a Forest Loop.ogg" id="6_5vw27"]
