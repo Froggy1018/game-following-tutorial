@@ -1,20 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmrhbmgbh0ruh"]
+[gd_scene load_steps=5 format=3 uid="uid://cmrhbmgbh0ruh"]
 
-[ext_resource type="Texture2D" uid="uid://dgctagoke73qu" path="res://enemyFlyingAlt_1.png" id="2_gfurk"]
-[ext_resource type="Texture2D" uid="uid://bshdm53jsv1tn" path="res://enemyFlyingAlt_2.png" id="3_ieysi"]
-[ext_resource type="Texture2D" uid="uid://bilce4om3g2k1" path="res://enemySwimming_1.png" id="4_cixyi"]
-[ext_resource type="Texture2D" uid="uid://2qjuhifipdjf" path="res://enemySwimming_2.png" id="5_7ulmv"]
-[ext_resource type="Texture2D" uid="uid://defwqawwvogo6" path="res://enemyWalking_1.png" id="6_pcqmr"]
-[ext_resource type="Texture2D" uid="uid://tltyqdixxuap" path="res://enemyWalking_2.png" id="7_jbnni"]
+[ext_resource type="Texture2D" uid="uid://bwfwbxse2r1lq" path="res://bee-removebg-preview.png" id="1_dy6sc"]
+[ext_resource type="Texture2D" uid="uid://c488a3pamka2n" path="res://ladybug-removebg-preview.png" id="1_nokgg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yscv0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gfurk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ieysi")
+"texture": ExtResource("1_nokgg")
 }],
 "loop": true,
 "name": &"fly",
@@ -22,10 +15,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_cixyi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_7ulmv")
+"texture": ExtResource("1_nokgg")
 }],
 "loop": true,
 "name": &"swim",
@@ -33,10 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_pcqmr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_jbnni")
+"texture": ExtResource("1_dy6sc")
 }],
 "loop": true,
 "name": &"walk",
@@ -44,20 +31,20 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eqsov"]
-radius = 36.0
+radius = 35.0
 height = 102.0
 
 [node name="mob" type="RigidBody2D" groups=["mobs"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 0)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_yscv0")
-animation = &"walk"
-frame_progress = 0.24679711
+animation = &"fly"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 0)
-rotation = 1.5707964
+position = Vector2(-3, 1)
+rotation = -6.2831855
 shape = SubResource("CapsuleShape2D_eqsov")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
