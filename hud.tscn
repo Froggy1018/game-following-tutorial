@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://12fgrwo6eox5" path="res://hud.gd" id="1_64ctp"]
 [ext_resource type="FontFile" uid="uid://b63asfv3fas3d" path="res://Xolonium-Regular.ttf" id="2_8sq4i"]
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" groups=["Persist"]]
 script = ExtResource("1_64ctp")
 
 [node name="ScoreLabel" type="Label" parent="."]
